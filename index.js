@@ -48,7 +48,17 @@ if(operator === '+') {
 }
 }
 
+ //Populates the display based upon the number selected.
+
+ function populate() {
+    const display = document.querySelector('#display');
+    const display_element = document.createElement('H2');
+        display_element.textContent = 'One Two Three Four'; //Creates an element for the display.
+    display.appendChild(display_element);
+ }
+
 //Tests the operate function and logs them in the console. Shows a multiply function and a error in the console.
 
 console.log (operate(13, '*', 18));
-console.log (operate(6, "a", 10))
+console.log (operate(6, "a", 10));
+populate();
