@@ -27,8 +27,28 @@ function divide (num1, num2) {
 // creates three variables, num1, operator, and num2.
 let num1 = 1;
 let operator = 'opeartor_input'; //Will be further defined later.
-letnum2 = 2;
+let num2 = 2;
 
-//Test the function results and log them in console.
+//Function that calls the function of the desired opeartor (Ex. add()) and returns the result. Will error is selected operator is not allowed/created.
+function operate(num1, operator, num2) {
+if(operator === '+') {
+    let result = add(num1, num2);
+    return result;
+} else if (operator === "-") {
+    let result = subtract(num1, num2);
+    return result;
+} else if (operator === "*") {
+    let result = multiply(num1, num2);
+    return result;
+} else if (operator === "/") {
+    let result = divide(num1, num2);
+    return result;
+} else {
+    console.error("Unknown operator.");
+}
+}
 
-console.log (add (1,1), subtract(1,1), multiply(1,2), divide(6,2));
+//Tests the operate function and logs them in the console. Shows a multiply function and a error in the console.
+
+console.log (operate(5, '*', 10));
+console.log (operate(6, "non-operator", 10))
