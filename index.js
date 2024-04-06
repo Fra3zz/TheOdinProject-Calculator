@@ -50,5 +50,5 @@ if(operator === '+') {
 
 //Tests the operate function and logs them in the console. Shows a multiply function and a error in the console.
 
-console.log (operate(5, '*', 10));
-console.log (operate(6, "non-operator", 10))
+console.log (operate(13, '*', 18));
+console.log (operate(6, "a", 10))
