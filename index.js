@@ -63,6 +63,7 @@ const display_element = document.createElement('H2');
 
 
 //Adds a number to the number variable when the number is selected.
+//Numbers
 const btn_one = document.querySelector('#one');
     btn_one.addEventListener('click', () => {
         selected_numbers.push(1)
@@ -148,6 +149,44 @@ const btn_nine = document.querySelector('#nine');
 const btn_zero = document.querySelector('#zero');
     btn_zero.addEventListener('click', () => {
         selected_numbers.push(0)
+        console.log (selected_numbers);
+        display_element.textContent = selected_numbers.join("");
+        display.appendChild(display_element);
+    } 
+)
+
+//Operators
+
+const btn_add = document.querySelector('#add');
+    btn_add.addEventListener('click', () => {
+        selected_numbers.push('+')
+        console.log (selected_numbers);
+        display_element.textContent = selected_numbers.join("");
+        display.appendChild(display_element);
+    } 
+)
+
+const btn_subtract = document.querySelector('#subtract');
+    btn_subtract.addEventListener('click', () => {
+        selected_numbers.push('-')
+        console.log (selected_numbers);
+        display_element.textContent = selected_numbers.join("");
+        display.appendChild(display_element);
+    } 
+)
+
+const btn_multiply = document.querySelector('#multiply');
+    btn_multiply.addEventListener('click', () => {
+        selected_numbers.push('*')
+        console.log (selected_numbers);
+        display_element.textContent = selected_numbers.join("");
+        display.appendChild(display_element);
+    } 
+)
+
+const btn_devide = document.querySelector('#devide');
+    btn_devide.addEventListener('click', () => {
+        selected_numbers.push('/')
         console.log (selected_numbers);
         display_element.textContent = selected_numbers.join("");
         display.appendChild(display_element);
