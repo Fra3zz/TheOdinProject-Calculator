@@ -54,9 +54,10 @@ if(operator === '+') {
  
     //Array is set to contain nothing.
     let selected_numbers = [];
+    let selected_operator = "";
 
 
-//Selected the ID=display elements and adds a "p" element. Adds the selected numbers to the display.
+//Selected the ID=display elements and adds a "p" element. Each number is added to the display upon button push.
 const display = document.querySelector('#display');
 const display_element = document.createElement('H2');
 
@@ -155,11 +156,13 @@ const btn_zero = document.querySelector('#zero');
     } 
 )
 
-//Operators
+
+
+//Operator
 
 const btn_add = document.querySelector('#add');
     btn_add.addEventListener('click', () => {
-        selected_numbers.push('+')
+        selected_numbers.push('+');
         console.log (selected_numbers);
         display_element.textContent = selected_numbers.join("");
         display.appendChild(display_element);
@@ -194,8 +197,7 @@ const btn_devide = document.querySelector('#devide');
 )
 
 
+
  }
 
-//Tests the operate function and logs them in the console. Shows a multiply function and a error in the console.
-
-console.log (populate());
+populate();
