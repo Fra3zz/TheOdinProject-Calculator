@@ -52,6 +52,7 @@ if(operator === '+') {
 
  function populate() {
  
+    //Array is set to contain nothing.
     let selected_numbers = [];
 
 
